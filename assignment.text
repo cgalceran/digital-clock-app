@@ -1,0 +1,21 @@
+
+Digital Clock
+
+
+1) Get the variables from Date Class
+
+
+2) Parse the variables
+
+- Hour: 0-24hrs  ---> should be in 01-12 AM or PM  (show current time in format HH:MM:SS (Example: 03:39:09)
+- Minutes: 1-60  ---> it's the same
+- Seconds: 1-60  ---> it's the same
+
+- Day of the week: integer 0-6 ---> should be the name of the day.
+- Date: integer 0-31 ---> should add ordinals like "st, nd, rd".
+- Month: 0-11 ---> should be the name of the month eg. january.
+- Year: 2023
+
+3) Output to DOM and update every second
+Use setInterval of 1000 millinseconds = 1 second
+
