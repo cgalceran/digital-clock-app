@@ -17,9 +17,10 @@ setInterval(() => {
     /* Get the elements we want and send parsed data to DOM
     */
     const runningClock = document.getElementById("clock");
-    runningClock.textContent = `${hour}:${minutes}:${seconds} ${now.getHours() <= 12 ? 'AM' : 'PM'}`;
+    runningClock.textContent = `${hour}:${minutes}:${seconds} ${now.getHours() < 12 ? 'AM' : 'PM'}`;
     const runningDate = document.getElementById("current-date");
     runningDate.textContent = `${dayOfTheWeek}, ${m} ${d} ${y}`;
+    //console.log(now.getHours());
 }, 1000);
 
 // Helper Functions and Arrays
@@ -41,8 +42,6 @@ function normalizeHour(input) {
     } else if (input === 0) {
         return 12;
     } else return input;
-
-
 };
 
 function getDayName(input) {
