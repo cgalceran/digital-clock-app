@@ -1,12 +1,10 @@
 
 setInterval(() => {
-
     // Get data from Date Class:
     const now = new Date();
 
-
     //  Parse Time to specs
-    const hour = addZeroInFront(normalizeHour(now.getHours()));
+    const hour = normalizeHour(now.getHours());
     const minutes = addZeroInFront(now.getMinutes());
     const seconds = addZeroInFront(now.getSeconds());
 
@@ -16,23 +14,13 @@ setInterval(() => {
     const m = getMonthName(now.getMonth());
     const y = String(now.getFullYear());
 
-
     /* Get the elements we want and send parsed data to DOM
     */
     const runningClock = document.getElementById("clock");
     runningClock.textContent = `${hour}:${minutes}:${seconds} ${now.getHours() <= 12 ? 'AM' : 'PM'}`;
-
-
     const runningDate = document.getElementById("current-date");
     runningDate.textContent = `${dayOfTheWeek}, ${m} ${d} ${y}`;
-
-
 }, 1000);
-
-
-
-
-
 
 // Helper Functions and Arrays
 
