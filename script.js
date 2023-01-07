@@ -24,7 +24,7 @@ setInterval(() => {
 
 // Helper Functions and Arrays
 
-const days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function addZeroInFront(input) {
@@ -62,5 +62,4 @@ function addOrdinal(input) {
         return String(input) + "rd";
     } else return String(input) + "th";
 }
-
 
